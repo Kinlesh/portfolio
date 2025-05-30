@@ -1,0 +1,6 @@
+<!-- chatbot/templates/chatbot/login.html -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Giriş Yap</button>
+</form>

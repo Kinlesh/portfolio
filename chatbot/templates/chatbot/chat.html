@@ -1,0 +1,12 @@
+<!-- chatbot/templates/chatbot/chat.html -->
+<h2>Chatbot</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="message" placeholder="Mesajınızı yazın" required>
+    <button type="submit">Gönder</button>
+</form>
+
+{% if user_message and bot_response %}
+    <p><strong>Kullanıcı:</strong> {{ user_message }}</p>
+    <p><strong>Bot:</strong> {{ bot_response }}</p>
+{% endif %}
